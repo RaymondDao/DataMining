@@ -1,3 +1,11 @@
+#Raymond Dao
+#CSCI 5502
+#HW1
+
+#1. To use, run python from command line: 'python hw1.py'
+#2. You will be prompted for two integer values i and j corresponding to columns
+#3. Results will be printed to command line
+
 import sys
 import csv
 import numpy as np
