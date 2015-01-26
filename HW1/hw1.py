@@ -1,3 +1,5 @@
+#!/usr/bin/python2.7
+
 #Raymond Dao
 #CSCI 5502
 #HW1
@@ -9,6 +11,7 @@
 import sys
 import csv
 import numpy as np
+import matplotlib
 
 	
 	
@@ -78,8 +81,29 @@ def metric(i,j):
 	print 'Q3: '+str(j_q3)
 	print 'IQR: '+str(j_iqr)
 	
+	return
+	
+#######################
+def scatter(i,j):
+	#Load the data
+	filename = "housing.data.txt"
+	d = []
+	data = np.loadtxt(filename,skiprows=0)
+	length =len(data);
+	
+	i_col = []
+	for x in range(0,length):
+		i_col.append(data[x][i])
+	j_col = []
+	for y in range(0,length):
+		j_col.append(data[y][j])
+		
+	mat.pyplot.scatter(i_col,j_col)
+	mat.pyplot.show()
+		
+	
 #######################
 
-i = raw_input("Type in integer column for i: ")
-j = raw_input("Type in integer column for j: ")
-metric(int(i),int(j))
+metric(int(sys.argv[1]),int(sys.argv[2]))
+
+scatter(12,13)
