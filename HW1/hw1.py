@@ -1,6 +1,7 @@
 #!/usr/bin/python2.7
 
 #Raymond Dao
+#SID: 830371305
 #CSCI 5502
 #HW1
 
@@ -83,27 +84,8 @@ def metric(i,j):
 	
 	return
 	
-#######################
-def scatter(i,j):
-	#Load the data
-	filename = "housing.data.txt"
-	d = []
-	data = np.loadtxt(filename,skiprows=0)
-	length =len(data);
-	
-	i_col = []
-	for x in range(0,length):
-		i_col.append(data[x][i])
-	j_col = []
-	for y in range(0,length):
-		j_col.append(data[y][j])
-		
-	mat.pyplot.scatter(i_col,j_col)
-	mat.pyplot.show()
-		
-	
+
 #######################
 
 metric(int(sys.argv[1]),int(sys.argv[2]))
 
-scatter(12,13)
